@@ -1,1 +1,1 @@
-"Komentorivi ja versionhallinta ovat jo tuttuja." 
+Komentorivi ja versionhallinta ovat jo tuttuja.
