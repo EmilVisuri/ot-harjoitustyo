@@ -1,1 +1,2 @@
-"# Ohjelmistotekniikka, harjoitusty”\n*Tarkoituksena olisi luoda sudoku peli, jossa k„ytt„j„ voi kirjautua sis„„n/luoda tunnuksen, jolloin peliss„ eteneminen tallennetaan tietokantaan." 
+# Ohjelmistotekniikka, harjoitustyÃ¶
+Tarkoituksena olisi luoda sudoku peli, jossa kÃ¤yttÃ¤jÃ¤ voi kirjautua sisÃ¤Ã¤n/luoda tunnuksen, jolloin pelisÃ¤ eteneminen tallennetaan tietokantaan. 
