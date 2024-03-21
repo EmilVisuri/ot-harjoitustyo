@@ -1,47 +1,26 @@
-class Kassapaate:
-    def __init__(self):
-        self.kassassa_rahaa = 100000
-        self.edulliset = 0
-        self.maukkaat = 0
+import unittest
+from maksukortti import Maksukortti
 
-    def syo_edullisesti_kateisella(self, maksu):
-        if maksu >= 240:
-            self.kassassa_rahaa = self.kassassa_rahaa + 240
-            self.edulliset += 1
-            return maksu - 240
-        else:
-            return maksu
+class TestMaksukortti(unittest.TestCase):
 
-    def syo_maukkaasti_kateisella(self, maksu):
-        if maksu >= 400:
-            self.kassassa_rahaa = self.kassassa_rahaa + 400
-            self.maukkaat += 1
-            return maksu - 400
-        else:
-            return maksu
+    def test_kortin_saldo_oikein_alussa(self):
+        kortti = Maksukortti(1000)
+        self.assertEqual(str(kortti), "Kortilla on rahaa 10.00 euroa")
 
-    def syo_edullisesti_kortilla(self, kortti):
-        if kortti.saldo >= 240:
-            kortti.ota_rahaa(240)
-            self.edulliset += 1
-            return True
-        else:
-            return False
+    def test_kortille_lataaminen_toimii_oikein(self):
+        kortti = Maksukortti(1000)
+        kortti.lataa_rahaa(500)
+        self.assertEqual(str(kortti), "Kortilla on rahaa 15.00 euroa")
 
-    def syo_maukkaasti_kortilla(self, kortti):
-        if kortti.saldo >= 400:
-            kortti.ota_rahaa(400)
-            self.maukkaat += 1
-            return True
-        else:
-            return False
+    def test_rahan_ottaminen_toimii_oikein(self):
+        kortti = Maksukortti(1000)
+        self.assertTrue(kortti.ota_rahaa(500))
+        self.assertEqual(str(kortti), "Kortilla on rahaa 5.00 euroa")
 
-    def lataa_rahaa_kortille(self, kortti, summa):
-        if summa >= 0:
-            kortti.lataa_rahaa(summa)
-            self.kassassa_rahaa += summa
-        else:
-            return
+    def test_ei_tarpeeksi_rahaa(self):
+        kortti = Maksukortti(100)
+        self.assertFalse(kortti.ota_rahaa(200))
+        self.assertEqual(str(kortti), "Kortilla on rahaa 1.00 euroa")
 
-    def kassassa_rahaa_euroina(self):
-        return self.kassassa_rahaa / 100
+if __name__ == '__main__':
+    unittest.main()
