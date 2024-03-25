@@ -4,7 +4,8 @@ Sovelluksen tarkoituksena on tarjota käyttäjille mahdollisuus pelata sudokuja.
 Käyttäjät:
 Sudokusovelluksessa on kaksi erilaista käyttäjäroolia:
 
-Rekisteröitynyt käyttäjä: Käyttäjä, joka on luonut tilin sovellukseen. Rekisteröitynyt käyttäjä voi tallentaa ratkaisunsa ja tallentaa  edistymistään.
+Rekisteröitynyt käyttäjä: 
+Käyttäjä, joka on luonut tilin sovellukseen. Rekisteröitynyt käyttäjä voi tallentaa ratkaisunsa ja tallentaa  edistymistään.
 Vierailija: Käyttäjä, joka käyttää sovellusta ilman sisäänkirjautumista. Vierailija voi ratkaista sudokuja, mutta ratkaisut eivät tallennu.
 Suunnitellut toiminnallisuudet:
 
@@ -18,6 +19,7 @@ Pelin tallentaminen:
 Käyttäjä voi tallentaa keskeneräisen pelin ja jatkaa sitä myöhemmin.
 Pelin lopettaminen:
 Käyttäjä voi lopettaa pelin kesken ja palata takaisin päävalikkoon.
+
 Perusversion toiminnallisuudet:
 
 Rekisteröityminen ja kirjautuminen sisään.
