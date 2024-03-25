@@ -3,4 +3,5 @@ Tarkoituksena olisi luoda **sudoku** peli, jossa käyttäjä voi *kirjautua sis�
 
 
 laskarit: https://github.com/EmilVisuri/ot-harjoitustyo/tree/master/laskarit
+
 dokumentaatio: https://github.com/EmilVisuri/ot-harjoitustyo/tree/master/dokumentaatio
