@@ -12,12 +12,16 @@ Suunnitellut toiminnallisuudet:
 
 **Käyttäjänhallinta:**
 Rekisteröityminen ja kirjautuminen sisään.
+
 **Pelin pelaaminen:**
 Peliin tulee 5-10 eri sudokua, jotka vaikenevat aina edistyessä. Rekisteröityneiden käyttäjien edistyminen pelissä tallennetaan tietokantaan.
+
 **Pelin resetointi:**
 Käyttäjä voi aloittaa uuden pelin alusta, vaikka olisikin edennyt jo pelissä pitemmälle.
+
 **Pelin tallentaminen:**
 Käyttäjä voi tallentaa keskeneräisen pelin ja jatkaa sitä myöhemmin.
+
 **Pelin lopettaminen:**
 Käyttäjä voi lopettaa pelin kesken ja palata takaisin päävalikkoon.
 
