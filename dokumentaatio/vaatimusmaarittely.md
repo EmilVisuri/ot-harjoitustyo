@@ -6,6 +6,7 @@ Sudokusovelluksessa on kaksi erilaista käyttäjäroolia:
 
 Rekisteröitynyt käyttäjä: 
 Käyttäjä, joka on luonut tilin sovellukseen. Rekisteröitynyt käyttäjä voi tallentaa ratkaisunsa ja tallentaa  edistymistään.
+
 Vierailija: Käyttäjä, joka käyttää sovellusta ilman sisäänkirjautumista. Vierailija voi ratkaista sudokuja, mutta ratkaisut eivät tallennu.
 Suunnitellut toiminnallisuudet:
 
