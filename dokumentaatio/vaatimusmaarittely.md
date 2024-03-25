@@ -27,8 +27,8 @@ Käyttäjä voi lopettaa pelin kesken ja palata takaisin päävalikkoon.
 
 **Perusversion toiminnallisuudet:**
 
-Rekisteröityminen ja kirjautuminen sisään.
+- Rekisteröityminen ja kirjautuminen sisään.
 
-Sudokujen ratkaiseminen ja ratkaisujen tallentaminen.
+- Sudokujen ratkaiseminen ja ratkaisujen tallentaminen.
 
-Pelivalikon navigointi.
+- Pelivalikon navigointi.
