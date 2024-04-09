@@ -1,1 +1,4 @@
-25.04 0.5h vaatimusmäärittelyn ja työaikakirjanpidon luominen.
+- 25.03 0.5h vaatimusmäärittelyn ja työaikakirjanpidon luominen.
+- 05.04 2h sovelluksen tekemistä
+- 09.04 1h sovelluksen tekemistä
+- 09.04 0.5h changelogin, testien ja invoken tekemistä
