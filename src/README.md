@@ -2,6 +2,4 @@
 Tarkoituksena olisi luoda **sudoku** peli, jossa käyttäjä voi *kirjautua sisään/luoda tunnuksen*, jolloin pelissä eteneminen **tallennetaan tietokantaan**. 
 
 
-laskarit: https://github.com/EmilVisuri/ot-harjoitustyo/tree/master/laskarit
-
-dokumentaatio: https://github.com/EmilVisuri/ot-harjoitustyo/tree/master/dokumentaatio
+Pelissä pystyy tällä hetkellä pääsemään peliin vierailijana. Itse pelissä voi laittaa tyhjään ruutuun valitsemansa numeron 0-9 välillä ja päästä takaisin alkuvalikkoon "takaisin" napista.
