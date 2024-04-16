@@ -52,3 +52,5 @@ Interface.py
 
 |___ board()
 
+
+![image](https://github.com/EmilVisuri/ot-harjoitustyo/assets/156796516/8d083854-a547-48c8-bfdf-7bb649695866)
