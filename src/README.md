@@ -11,4 +11,4 @@ Changelog: https://github.com/EmilVisuri/ot-harjoitustyo/blob/master/dokumentaat
 
 Työaikakirjanpito: https://github.com/EmilVisuri/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md
 
-Vaatimusmäärittely: 
+Vaatimusmäärittely: https://github.com/EmilVisuri/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md
