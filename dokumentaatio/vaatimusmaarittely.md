@@ -7,7 +7,7 @@ Sudokusovelluksessa on kaksi erilaista käyttäjäroolia:
 *Rekisteröitynyt käyttäjä:* 
 Käyttäjä, joka on luonut tilin sovellukseen. Rekisteröitynyt käyttäjä voi tallentaa ratkaisunsa ja tallentaa  edistymistään.
 
-*Vierailija:* Käyttäjä, joka käyttää sovellusta ilman sisäänkirjautumista. Vierailija voi ratkaista sudokuja, mutta ratkaisut eivät tallennu.
+*Vierailija:* Käyttäjä, joka käyttää sovellusta ilman sisäänkirjautumista. Vierailija voi ratkaista sudokuja, mutta ratkaisut eivät tallennu. (tehty)
 Suunnitellut toiminnallisuudet:
 
 **Käyttäjänhallinta:**
@@ -17,13 +17,13 @@ Rekisteröityminen ja kirjautuminen sisään.
 Peliin tulee 5-10 eri sudokua, jotka vaikenevat aina edistyessä. Rekisteröityneiden käyttäjien edistyminen pelissä tallennetaan tietokantaan.
 
 **Pelin resetointi:**
-Käyttäjä voi aloittaa uuden pelin alusta, vaikka olisikin edennyt jo pelissä pitemmälle.
+Käyttäjä voi aloittaa uuden pelin alusta, vaikka olisikin edennyt jo pelissä pitemmälle. (tehty)
 
 **Pelin tallentaminen:**
 Käyttäjä voi tallentaa keskeneräisen pelin ja jatkaa sitä myöhemmin.
 
 **Pelin lopettaminen:**
-Käyttäjä voi lopettaa pelin kesken ja palata takaisin päävalikkoon.
+Käyttäjä voi lopettaa pelin kesken ja palata takaisin päävalikkoon. (tehty)
 
 **Perusversion toiminnallisuudet:**
 
@@ -31,4 +31,4 @@ Käyttäjä voi lopettaa pelin kesken ja palata takaisin päävalikkoon.
 
 - Sudokujen ratkaiseminen ja ratkaisujen tallentaminen.
 
-- Pelivalikon navigointi.
+- Pelivalikon navigointi. (tehty)
