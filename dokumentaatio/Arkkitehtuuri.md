@@ -84,12 +84,12 @@ Database->>Program: Palautetaan vahvistus rekisteröinnistä
 Program->>User: Näytä viesti rekisteröimisen onnistumisesta
   
 
-    
+<br>
 else Käyttäjänimi on valmiiksi käytössä:
 
 Database->>Program: Palauta virheilmoitus
     
 Program->>User: Näytä virheilmoitus käyttäjälle
      
-    
+<br>  
 end
