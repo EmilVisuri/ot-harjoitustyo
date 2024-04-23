@@ -11,7 +11,7 @@ Käyttäjä, joka on luonut tilin sovellukseen. Rekisteröitynyt käyttäjä voi
 Suunnitellut toiminnallisuudet:
 
 **Käyttäjänhallinta:**
-Rekisteröityminen ja kirjautuminen sisään.
+Rekisteröityminen ja kirjautuminen sisään. (pääosin valmis)
 
 **Pelin pelaaminen:**
 Peliin tulee 5-10 eri sudokua, jotka vaikenevat aina edistyessä. Rekisteröityneiden käyttäjien edistyminen pelissä tallennetaan tietokantaan.
@@ -27,7 +27,7 @@ Käyttäjä voi lopettaa pelin kesken ja palata takaisin päävalikkoon. (tehty)
 
 **Perusversion toiminnallisuudet:**
 
-- Rekisteröityminen ja kirjautuminen sisään.
+- Rekisteröityminen ja kirjautuminen sisään. (pääosin valmis)
 
 - Sudokujen ratkaiseminen ja ratkaisujen tallentaminen.
 
