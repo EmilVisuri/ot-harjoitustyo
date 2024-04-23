@@ -7,3 +7,8 @@
 ## Viikko 4
 - Lisätty nollaa nappi nappi, jonka avulla pelaajan lisäämät numerot poistuvat
 - Lisätty tarkasta nappi, jonka avulla tarkastetaan onko sudoku tehty oikein.
+
+## Viikko 5
+- Lisätty kirjautumis ja rekisteröitymis mahdollisuus (näiden toiminnallisuus ei ole vielä täysin toiminnassa)
+- Lisätty mahdollisuus edetä seuraavaan tasoon
+- Lisätty SQLite tietokanta, johon tarkoitus lisätä käyttäjien käyttäjätunnut, salasana, sekä taso.
