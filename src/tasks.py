@@ -1,11 +1,8 @@
 from invoke import task
 
 @task
-def start(ctx):
-    """
-    Käynnistä ohjelma.
-    """
-    ctx.run("poetry run python src/interface.py")
+def start(c):
+    c.run("python3 interface.py")
 
 @task
 def test(ctx):
