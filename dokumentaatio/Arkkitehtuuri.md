@@ -74,6 +74,7 @@ Program->>Database: Lähetetöön käyttäjän tiedot (käyttäjänimi ja salasa
 Database->>Program: Vahvistetaan, että käyttäjänimi ei ole jo käytössä
 
 
+
 alt Käyttäjänimi on vapaa:
 
 Program->>Database: Lisätään käyttäjä tietokantaan
@@ -82,6 +83,7 @@ Database->>Program: Palautetaan vahvistus rekisteröinnistä
     
 Program->>User: Näytä viesti rekisteröimisen onnistumisesta
   
+
     
 else Käyttäjänimi on valmiiksi käytössä:
 
