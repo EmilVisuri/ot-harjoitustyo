@@ -2,3 +2,5 @@
 - 05.04 2h sovelluksen tekemistä
 - 09.04 1h sovelluksen tekemistä
 - 09.04 0.5h changelogin, testien ja invoken tekemistä
+- 14.03 3h sovelluksen tekemistä
+- 16.4 2h kahden uuden testin käyttöönotto, pylintin käyttöönotto ja arkkitehtuuri tiedoston luominen
