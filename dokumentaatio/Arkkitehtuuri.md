@@ -85,9 +85,9 @@ alt Käyttäjänimi on vapaa:
     
 else Käyttäjänimi on valmiiksi käytössä:
 
-     Database->>Program: Palauta virheilmoitus
+    Database->>Program: Palauta virheilmoitus
     
-     Program->>User: Näytä virheilmoitus käyttäjälle
+    Program->>User: Näytä virheilmoitus käyttäjälle
      
     
 end
