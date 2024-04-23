@@ -66,15 +66,15 @@ participant Program
 
 participant Database
 
-<br
+<br>
 User->>Program: Annetaan käyttäjänimi ja salasana rekisteröitymiseen
 
 Program->>Database: Lähetetöön käyttäjän tiedot (käyttäjänimi ja salasana)
 
 Database->>Program: Vahvistetaan, että käyttäjänimi ei ole jo käytössä
-br>
 
 
+<br>
 alt Käyttäjänimi on vapaa:
 
 Program->>Database: Lisätään käyttäjä tietokantaan
