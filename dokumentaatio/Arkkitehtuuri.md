@@ -60,18 +60,18 @@ Interface.py
 
 ## Sekvenssikaavio käyttäjän lisäämisestä tietokantaan
 
-    participant User
-    participant Program
-    participant Database
+participant User
+participant Program
+participant Database
 
-    User->>Program: Antaa käyttäjänimen ja salasanan rekisteröityäkseen
-    Program->>Database: Lähetä käyttäjän tiedot (käyttäjänimi, salasana)
-    Database->>Program: Vahvista, että käyttäjänimi ei ole jo käytössä
-    alt Käyttäjänimi on vapaa
-        Program->>Database: Lisää käyttäjä tietokantaan
-        Database->>Program: Palauta vahvistus rekisteröinnistä
-        Program->>User: Näytä viesti rekisteröinnin onnistumisesta
-    else Käyttäjänimi on jo käytössä
-        Database->>Program: Palauta virheilmoitus
-        Program->>User: Näytä virheilmoitus käyttäjälle
-    end
+User->>Program: Antaa käyttäjänimen ja salasanan rekisteröityäkseen
+Program->>Database: Lähetä käyttäjän tiedot (käyttäjänimi, salasana)
+Database->>Program: Vahvista, että käyttäjänimi ei ole jo käytössä
+alt Käyttäjänimi on vapaa
+    Program->>Database: Lisää käyttäjä tietokantaan
+    Database->>Program: Palauta vahvistus rekisteröinnistä
+    Program->>User: Näytä viesti rekisteröinnin onnistumisesta
+else Käyttäjänimi on jo käytössä
+    Database->>Program: Palauta virheilmoitus
+    Program->>User: Näytä virheilmoitus käyttäjälle
+end
