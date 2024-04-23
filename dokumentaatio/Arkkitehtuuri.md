@@ -67,21 +67,21 @@ participant Program
 participant Database
 
 
-User->>Program: Antaa käyttäjänimen ja salasanan rekisteröityäkseen
+User->>Program: Annetaan käyttäjänimi ja salasana rekisteröitymiseen
 
-Program->>Database: Lähetä käyttäjän tiedot (käyttäjänimi, salasana)
+Program->>Database: Lähetetöön käyttäjän tiedot (käyttäjänimi ja salasana)
 
-Database->>Program: Vahvista, että käyttäjänimi ei ole jo käytössä
+Database->>Program: Vahvistetaan, että käyttäjänimi ei ole jo käytössä
 
-alt Käyttäjänimi on vapaa
+alt Käyttäjänimi on vapaa:
 
-    Program->>Database: Lisää käyttäjä tietokantaan
+    Program->>Database: Lisätään käyttäjä tietokantaan
     
-    Database->>Program: Palauta vahvistus rekisteröinnistä
+    Database->>Program: Palautetaan vahvistus rekisteröinnistä
     
-    Program->>User: Näytä viesti rekisteröinnin onnistumisesta
+    Program->>User: Näytä viesti rekisteröimisen onnistumisesta
     
-else Käyttäjänimi on jo käytössä
+else Käyttäjänimi on valmiiksi käytössä:
 
     Database->>Program: Palauta virheilmoitus
     
