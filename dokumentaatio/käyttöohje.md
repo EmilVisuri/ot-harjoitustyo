@@ -1,5 +1,5 @@
-<h1> Käyttöohjeet <h1>
+# Käyttöohjeet #
   
 Lataa ohjelma releases kohdasta ZIP-tiedostona ja pura se haluamaasi paikkaan.
 
-# Käynnistäminen
+## Käynnistäminen
