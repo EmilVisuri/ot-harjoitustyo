@@ -26,3 +26,17 @@ Kirjautumisnäkymässä käyttäjä voi antaa käyttäjätunnuksensa ja salasana
 Rekisteröitymisnäkymässä käyttäjä voi keksiä oman käyttäjätunnuksen ja salasanan ja luoda käyttäjän, tai palata takaisin aloitussivulle.
 
 ![image](https://github.com/EmilVisuri/ot-harjoitustyo/assets/156796516/5c46c27a-c37f-46ec-a38c-662060368432)
+
+
+## Pelinäkymä
+Pelinäkymässä käyttäjä voi ratkaista sudokua, palata takaisin aloitusnäytölle, nollata antamansa numeronsa tai tarkistaa onko sudoku ratkaistu oikein.
+
+![image](https://github.com/EmilVisuri/ot-harjoitustyo/assets/156796516/15294d0c-da75-4192-be39-b5f445c7b4b7)
+
+Jos sudoku on ratkaistu oikein, niin käyttäjä voi edetä seuraavaan tasoon.
+
+![image](https://github.com/EmilVisuri/ot-harjoitustyo/assets/156796516/e8738f1b-f304-488e-b01c-b8740117ce8f)
+
+Jos sudokua ei ole ratkaistu oikein, niin käyttäjälle annetaan siitä viesti.
+
+![image](https://github.com/EmilVisuri/ot-harjoitustyo/assets/156796516/18280309-d2e7-4378-81bf-de56f17b838b)
