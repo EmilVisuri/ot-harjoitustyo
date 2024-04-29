@@ -14,7 +14,7 @@ Suunnitellut toiminnallisuudet:
 Rekisteröityminen ja kirjautuminen sisään. (pääosin valmis)
 
 **Pelin pelaaminen:**
-Peliin tulee 5-10 eri sudokua, jotka vaikenevat aina edistyessä. Rekisteröityneiden käyttäjien edistyminen pelissä tallennetaan tietokantaan.
+Peliin tulee 5-10 eri sudokua, jotka vaikenevat aina edistyessä (tehty). Rekisteröityneiden käyttäjien edistyminen pelissä tallennetaan tietokantaan.
 
 **Pelin resetointi:**
 Käyttäjä voi aloittaa uuden pelin alusta, vaikka olisikin edennyt jo pelissä pitemmälle. (tehty)
