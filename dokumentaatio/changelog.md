@@ -12,3 +12,8 @@
 - Lisätty kirjautumis ja rekisteröitymis mahdollisuus (näiden toiminnallisuus ei ole vielä täysin toiminnassa)
 - Lisätty mahdollisuus edetä seuraavaan tasoon
 - Lisätty SQLite tietokanta, johon tarkoitus lisätä käyttäjien käyttäjätunnut, salasana, sekä taso.
+
+## Viikko 6
+- Lisätty viimeiset tasot sudokuun.
+- Korjattu pylintin antamia virheitä
+- Koodia yritetty siistiä jonkin verran
