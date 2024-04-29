@@ -7,3 +7,6 @@
 - 21.4 2h sovelluksen tekemistä
 - 22.4 3h sovelluksen tekemistä
 - 23.4 5h sovelluksen tekemistä, uuden sekvenssikaavion luominen, uusien testien lisääminen
+- 26.4 4h Pylintin antamien virheiden korjaamista
+- 28.4 2h Pylintin antamien virheiden korjaamista
+- 29.4 2h Arkkitehtuurikuvauksen tekemistä, docstringien luominen, sekä käyttöohjeen luominen.
