@@ -9,6 +9,8 @@ Arkkitehtuuri: https://github.com/EmilVisuri/ot-harjoitustyo/blob/master/dokumen
 
 Changelog: https://github.com/EmilVisuri/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md
 
+käyttöohje: 
+
 Työaikakirjanpito: https://github.com/EmilVisuri/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md
 
 Vaatimusmäärittely: https://github.com/EmilVisuri/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md
