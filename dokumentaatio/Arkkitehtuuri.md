@@ -6,15 +6,11 @@ Sekvenssikaavio ohjelman rakenteesta
 
 ![image](https://github.com/EmilVisuri/ot-harjoitustyo/assets/156796516/8d083854-a547-48c8-bfdf-7bb649695866)
 
-ui: Sisältää käyttöliittymään liittyvät komponentit.
-
-services: Tässä paketissa on sovelluslogiikasta vastaavat luokat.
-
-repositories: Sisältää tietojen pysyväistallennuksesta vastaavat komponentit.
 
 ## Käyttöliittymä:
-Käyttöliittymässä on erilliset näkymät, jotka on toteutettu omiksi luokikseen.
-Näiden näkymien hallinnasta vastaa UI-luokka tai vastaava.
+Käyttöliittymässä on näkymät kirjautumiselle, rekisteröinnille ja itse pelille.
+
+Käyttöliittymän näkymät on toteuttu kaikki samassa interface.py tiedostossa
 
 ## Sovelluslogiikka:
 SudokuGame.py
@@ -73,16 +69,16 @@ Interface.py
 
 
 Sovelluksen toiminnallisuudet ovat keskitetty SudokuGame-luokkaan.
-Tämä luokka tarjoaa toiminnot pelin hallintaan, kuten pelin aloitus, lopetus, numeroiden lisääminen, pelitilanteen tarkistaminen jne.
+Tämä luokka tarjoaa toiminnot pelin hallintaan, kuten pelin aloitus, lopetus, numeroiden lisääminen, pelitilanteen tarkistaminen yms.
 Sovelluslogiikka ei suoraan käsittele tietojen tallennusta, vaan se voi kutsua tarvittaessa database-moduulin funktioita.
 
 Tietojen pysyväistallennus:
 database-moduuli vastaa tietojen tallennuksesta ja hakemisesta.
-Esimerkiksi check_login, update_level_in_database, get_user_level jne. toimivat tietojen tallennuksen ja hakemisen parissa.
+Esimerkiksi check_login, update_level_in_database, get_user_level yms. toimivat tietojen tallennuksen ja hakemisen parissa.
 
 Ohjelman rakenteeseen jääneet heikkoudet:
-Sovelluksen rakenteessa voi olla toisteisuutta tai mahdollisia parannusmahdollisuuksia, kuten yleisten komponenttien tai toistuvien toiminnallisuuksien eriyttäminen omiksi osikseen.
-Tietojen pysyväistallennuksen osalta voisi harkita tietokantayhteyden hallintaa tai tallennustapojen abstrahointia, jotta muutokset tietojen tallennuksessa olisivat helpompia tehdä.
+Sovelluksen rakenteessa voi olla toisteisuutta ja mahdollisia parannusmahdollisuuksia olisikin yleisten komponenttien tai toistuvien toiminnallisuuksien eriyttäminen omiksi osikseen.
+Myös sovelluksen eri osat voisi littää omiin tiedostoihinsa.
 
 ## Sekvenssikaavio käyttäjän lisäämisestä tietokantaan
 
