@@ -74,7 +74,7 @@ Tämä luokka tarjoaa toiminnot pelin hallintaan, kuten pelin aloitus, lopetus, 
 
 Sovelluslogiikka ei suoraan käsittele tietojen tallennusta, vaan se voi kutsua tarvittaessa database-moduulin funktioita.
 
-Tietojen pysyväistallennus:
+**Tietojen pysyväistallennus:**
 
 database-moduuli vastaa tietojen tallennuksesta ja hakemisesta.
 
