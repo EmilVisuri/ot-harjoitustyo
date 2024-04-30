@@ -17,3 +17,4 @@
 - Lisätty viimeiset tasot sudokuun (tarkoituksella vielä täytettyinä helpottaakseen testaamista).
 - Korjattu pylintin antamia virheitä.
 - Koodia ja ohjelman rakennetta yritetty siistiä jonkin verran.
+- Kaikki tasot suoritettuna, peli aloittaa kokonaan alusta.
