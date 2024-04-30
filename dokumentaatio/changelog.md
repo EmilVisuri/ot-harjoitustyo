@@ -14,6 +14,6 @@
 - Lisätty SQLite tietokanta, johon tarkoitus lisätä käyttäjien käyttäjätunnut, salasana, sekä taso.
 
 ## Viikko 6
-- Lisätty viimeiset tasot sudokuun.
+- Lisätty viimeiset tasot sudokuun (tarkoituksella vielä täytettyinä helpottaakseen testaamista).
 - Korjattu pylintin antamia virheitä.
 - Koodia ja ohjelman rakennetta yritetty siistiä jonkin verran.
