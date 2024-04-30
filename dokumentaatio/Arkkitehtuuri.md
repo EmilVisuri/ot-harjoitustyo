@@ -117,6 +117,14 @@ Program->>User: Näytä virheilmoitus käyttäjälle
 <br>  
 end
 
+**sekvenssikaavio käyttäjän rekisteröitymisestä**
+
+ *pitää vielä tehdä*
+ 
+**sekvenssikaavio pelin toiminnasta**
+
+*pitää vielä tehdä*
+
 ## Ohjelman rakenteeseen jääneet heikkoudet:
 Sovelluksen rakenteessa voi olla toisteisuutta ja mahdollisia parannusmahdollisuuksia olisikin yleisten komponenttien tai toistuvien toiminnallisuuksien eriyttäminen omiksi osikseen.
 Myös sovelluksen eri osat voisi littää omiin tiedostoihinsa.
