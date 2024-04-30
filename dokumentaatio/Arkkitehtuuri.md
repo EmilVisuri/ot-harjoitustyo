@@ -1,4 +1,4 @@
-## Arkkitehtuurikuvaus
+# Arkkitehtuurikuvaus
 
 ## Pakkausrakenne:
 
@@ -69,18 +69,19 @@ Interface.py
 
 
 Sovelluksen toiminnallisuudet ovat keskitetty SudokuGame-luokkaan.
+
 Tämä luokka tarjoaa toiminnot pelin hallintaan, kuten pelin aloitus, lopetus, numeroiden lisääminen, pelitilanteen tarkistaminen yms.
+
 Sovelluslogiikka ei suoraan käsittele tietojen tallennusta, vaan se voi kutsua tarvittaessa database-moduulin funktioita.
 
 Tietojen pysyväistallennus:
+
 database-moduuli vastaa tietojen tallennuksesta ja hakemisesta.
+
 Esimerkiksi check_login, update_level_in_database, get_user_level yms. toimivat tietojen tallennuksen ja hakemisen parissa.
 
-Ohjelman rakenteeseen jääneet heikkoudet:
-Sovelluksen rakenteessa voi olla toisteisuutta ja mahdollisia parannusmahdollisuuksia olisikin yleisten komponenttien tai toistuvien toiminnallisuuksien eriyttäminen omiksi osikseen.
-Myös sovelluksen eri osat voisi littää omiin tiedostoihinsa.
-
-## Sekvenssikaavio käyttäjän lisäämisestä tietokantaan
+## Päätoiminnallisuudet
+**Sekvenssikaavio käyttäjän lisäämisestä tietokantaan**
 
 participant User
 
@@ -115,3 +116,7 @@ Program->>User: Näytä virheilmoitus käyttäjälle
      
 <br>  
 end
+
+## Ohjelman rakenteeseen jääneet heikkoudet:
+Sovelluksen rakenteessa voi olla toisteisuutta ja mahdollisia parannusmahdollisuuksia olisikin yleisten komponenttien tai toistuvien toiminnallisuuksien eriyttäminen omiksi osikseen.
+Myös sovelluksen eri osat voisi littää omiin tiedostoihinsa.
