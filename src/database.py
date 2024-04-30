@@ -2,108 +2,171 @@ import sqlite3
 import hashlib
 
 
-def Hash_password(password):
+def hash_password(password):
+    """
+    Hashes the given password.
+
+    Args:
+    - password (str): The password to be hashed.
+
+    Returns:
+    - str: The hashed password.
+    """
     return hashlib.sha256(password.encode()).hexdigest()
 
-def Create_users_table():
-    Conn = sqlite3.connect('users.db')
-    Cursor = Conn.cursor()
-    Cursor.execute('''CREATE TABLE IF NOT EXISTS users (
+def create_users_table():
+    """
+    Creates the 'users' table in the database if it does not exist.
+    """
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
+    cursor.execute('''CREATE TABLE IF NOT EXISTS users (
                         id INTEGER PRIMARY KEY AUTOINCREMENT,
                         username TEXT UNIQUE,
                         password TEXT, level INTEGER DEFAULT 1
                     )''')
-    Conn.commit()
-    Conn.close()
+    conn.commit()
+    conn.close()
 
-def Add_user(username, password, level):
-    Create_users_table()
-    Conn = sqlite3.connect('users.db')
-    Cursor = Conn.cursor()
+def add_user(username, password, level):
+    """
+    Adds a new user to the database.
+
+    Args:
+    - username (str): The username of the user.
+    - password (str): The password of the user.
+    - level (int): The level of the user.
+
+    """
+    create_users_table()
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
     try:
-        Hashed_password = Hash_password(password)
-        Cursor.execute("INSERT INTO users (username, password, level) VALUES (?, ?, ?)", (username, Hashed_password, level))
-        Conn.commit()
+        hashed_password = hash_password(password)
+        cursor.execute("INSERT INTO users (username, password, level) VALUES (?, ?, ?)",
+                       (username, hashed_password, level))
+        conn.commit()
     except sqlite3.IntegrityError:
-        print("Käyttäjätunnus on jo käytössä.")
+        print("Käyttäjätunnus on jo käytössä.")  # Lisätään virheilmoitus
 
-def Check_login(username, password):
-    Conn = sqlite3.connect('users.db')
-    Cursor = Conn.cursor()
+def check_login(username, password):
+    """
+    Checks if the given username and password match a user in the database.
+
+    Args:
+    - username (str): The username of the user.
+    - password (str): The password of the user.
+
+    Returns:
+    - bool: True if the login is successful, False otherwise.
+    """
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
     try:
-        Hashed_password = Hash_password(password)
-        Cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, Hashed_password))
-        user = Cursor.fetchone()
+        hashed_password = hash_password(password)
+        cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?",
+                       (username, hashed_password))
+        user = cursor.fetchone()
         return user is not None
     finally:
-        Cursor.close()
-        Conn.close()
-        
-        
-def Get_user_level(username):
-    Conn = sqlite3.connect('users.db')
-    Cursor = Conn.cursor()
+        cursor.close()
+        conn.close()
+
+def get_user_level(username):
+    """
+    Retrieves the level of the given user from the database.
+
+    Args:
+    - username (str): The username of the user.
+
+    Returns:
+    - int: The level of the user, or None if the user is not found.
+    
+    """
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
     try:
-        Cursor.execute("SELECT level FROM users WHERE username = ?", (username,))
-        level = Cursor.fetchone()
+        cursor.execute("SELECT level FROM users WHERE username = ?", (username,))
+        level = cursor.fetchone()
         if level:
             return level[0]
-        else:
-            print("Käyttäjän tasoa ei löytynyt.")
-            return None
+        print("Käyttäjän tasoa ei löytynyt.")
+        return None
     except sqlite3.Error as e:
         print("Virhe haettaessa käyttäjän tasoa:", e)
         return None
     finally:
-        Cursor.close()
-        Conn.close()        
-        
-def Update_level_in_database(username, new_level):
-    Conn = sqlite3.connect('users.db')
-    Cursor = Conn.cursor()
+        cursor.close()
+        conn.close()
+
+def update_level_in_database(username, new_level):
+    """
+    Updates the level of the given user in the database.
+
+    Args:
+    - username (str): The username of the user.
+    - new_level (int): The new level to be updated.
+
+    """
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
     try:
-        Cursor.execute("UPDATE users SET level = ? WHERE username = ?", (new_level, username))
-        Conn.commit()
+        cursor.execute("UPDATE users SET level = ? WHERE username = ?", (new_level, username))
+        conn.commit()
         print("Käyttäjän taso päivitetty onnistuneesti.")
     except sqlite3.Error as e:
         print("Virhe päivitettäessä käyttäjän tasoa:", e)
     finally:
-        Cursor.close()
-        Conn.close()
-        
-def Get_username():
-    Conn = sqlite3.connect('users.db')
-    Cursor = Conn.cursor()
+        cursor.close()
+        conn.close()
+
+def get_username():
+    """
+    Retrieves the username from the database.
+
+    Returns:
+    - str: The username, or None if not found.
+    
+    """
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
     try:
-        Cursor.execute("SELECT username FROM users")
-        username = Cursor.fetchone()
+        cursor.execute("SELECT username FROM users")
+        username = cursor.fetchone()
         if username:
             return username[0]
-        else:
-            print("Käyttäjän käyttäjänimeä ei löytynyt.")
-            return None
+        print("Käyttäjän käyttäjänimeä ei löytynyt.")
+        return None
     except sqlite3.Error as e:
         print("Virhe haettaessa käyttäjän käyttäjänimeä:", e)
         return None
     finally:
-        Cursor.close()
-        Conn.close()
+        cursor.close()
+        conn.close()
 
-def Get_level(username):
-    Conn = sqlite3.connect('users.db')
-    Cursor = Conn.cursor()
+def get_level(username):
+    """
+    Retrieves the level of the given user from the database.
+
+    Args:
+    - username (str): The username of the user.
+
+    Returns:
+    - int: The level of the user, or None if the user is not found.
+    
+    """
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
     try:
-        Cursor.execute("SELECT level FROM users WHERE username = ?", (username,))
-        level = Cursor.fetchone()
+        cursor.execute("SELECT level FROM users WHERE username = ?", (username,))
+        level = cursor.fetchone()
         if level:
             return level[0]
-        else:
-            print("Käyttäjän tasoa ei löytynyt.")
-            return None
+        print("Käyttäjän tasoa ei löytynyt.")
+        return None
     except sqlite3.Error as e:
         print("Virhe haettaessa käyttäjän tasoa:", e)
         return None
     finally:
-        Cursor.close()
-        Conn.close()
-        
+        cursor.close()
+        conn.close()

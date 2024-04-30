@@ -1,126 +1,230 @@
-from database import Check_login, Update_level_in_database, Get_user_level
+from database import check_login, update_level_in_database, get_user_level
 
 class SudokuGame:
     def __init__(self):
-        self.Boards = [
+        """
+        Initializes the SudokuGame object.
+        
+        """
+        self.boards = [
             [
-                [5, 3, 0, 0, 7, 0, 0, 0, 0],
-                [6, 0, 0, 1, 9, 5, 0, 0, 0],
-                [0, 9, 8, 0, 0, 0, 0, 6, 0],
-                [8, 0, 0, 0, 6, 0, 0, 0, 3],
-                [4, 0, 0, 8, 0, 3, 0, 0, 1],
-                [7, 0, 0, 0, 2, 0, 0, 0, 6],
-                [0, 6, 0, 0, 0, 0, 2, 8, 0],
-                [0, 0, 0, 4, 1, 9, 0, 0, 5],
-                [0, 0, 0, 0, 8, 0, 0, 7, 9]
+                [5, 3, 4, 6, 7, 8, 9, 1, 2],
+                [6, 7, 2, 1, 9, 5, 3, 4, 8],
+                [1, 9, 8, 3, 4, 2, 5, 6, 7],
+                [8, 5, 9, 7, 6, 1, 4, 2, 3],
+                [4, 2, 6, 8, 5, 3, 7, 9, 1],
+                [7, 1, 3, 9, 2, 4, 8, 5, 6],
+                [9, 6, 1, 5, 3, 7, 2, 8, 4],
+                [2, 8, 7, 4, 1, 9, 6, 3, 5],
+                [3, 4, 5, 2, 8, 6, 1, 7, 0]
             ],
             [
-                [0, 0, 0, 4, 3, 0, 0, 0, 0],
-                [3, 4, 0, 0, 0, 6, 0, 1, 0],
-                [0, 1, 2, 0, 0, 0, 0, 0, 3],
-                [0, 0, 0, 8, 0, 0, 3, 2, 0],
-                [2, 0, 0, 0, 0, 0, 0, 0, 8],
-                [0, 5, 8, 0, 0, 3, 0, 0, 0],
-                [5, 0, 0, 0, 0, 0, 7, 8, 0],
-                [0, 7, 0, 5, 0, 0, 0, 4, 9],
-                [0, 0, 0, 0, 9, 1, 0, 0, 0]
+                [9, 1, 6, 3, 7, 2, 5, 8, 4],
+                [5, 7, 8, 9, 6, 4, 3, 1, 2],
+                [3, 2, 4, 1, 5, 8, 9, 7, 6],
+                [8, 5, 9, 2, 4, 7, 6, 3, 1],
+                [1, 6, 3, 5, 8, 9, 2, 4, 7],
+                [2, 4, 7, 6, 1, 3, 8, 9, 5],
+                [6, 8, 5, 4, 9, 1, 7, 2, 3],
+                [7, 3, 1, 8, 2, 6, 4, 5, 9],
+                [4, 9, 2, 7, 3, 5, 1, 6, 0]
+            ],
+            [
+                [1, 4, 7, 6, 8, 2, 9, 5, 3],
+                [3, 9, 8, 7, 5, 4, 6, 2, 1],
+                [6, 2, 5, 3, 9, 1, 7, 8, 4],
+                [9, 7, 2, 1, 4, 6, 8, 3, 5],
+                [5, 8, 1, 9, 2, 3, 4, 6, 7],
+                [4, 3, 6, 5, 7, 8, 1, 9, 2],
+                [2, 5, 4, 8, 1, 9, 3, 7, 6],
+                [7, 6, 9, 4, 3, 5, 2, 1, 8],
+                [8, 1, 3, 2, 6, 7, 5, 4, 0]
+            ],
+            [
+                [6, 7, 9, 4, 3, 8, 5, 2, 1],
+                [2, 4, 8, 5, 1, 6, 3, 7, 9],
+                [1, 5, 3, 2, 7, 9, 6, 8, 4],
+                [5, 9, 6, 8, 2, 1, 4, 3, 7],
+                [7, 3, 4, 6, 9, 5, 2, 1, 8],
+                [8, 1, 2, 7, 4, 3, 9, 6, 5],
+                [9, 8, 5, 3, 6, 7, 1, 4, 2],
+                [3, 2, 1, 9, 8, 4, 7, 5, 6],
+                [4, 6, 7, 1, 5, 2, 8, 9, 0]
+            ],
+            [
+                [9, 3, 8, 7, 5, 6, 1, 2, 4],
+                [4, 6, 1, 3, 2, 8, 9, 5, 7],
+                [2, 7, 5, 1, 9, 4, 8, 6, 3],
+                [8, 1, 6, 2, 7, 9, 3, 4, 5],
+                [5, 2, 4, 8, 1, 3, 7, 9, 6],
+                [7, 9, 3, 6, 4, 5, 2, 1, 8],
+                [6, 8, 9, 4, 3, 1, 5, 7, 2],
+                [1, 4, 2, 5, 8, 7, 6, 3, 9],
+                [3, 5, 7, 9, 6, 2, 4, 8, 0]
             ]
         ]
-        self.Original_numbers = None
-        self.Board = None
-        self.Game_started = False
-        self.Sudoku_solved = False
-        self.Current_board_index = 0
+        self.original_numbers = None
+        self.board = None
+        self.game_started = False
+        self.sudoku_solved = False
+        self.current_board_index = 0
 
-    def Select_board(self):
-        self.Original_numbers = self.Boards[self.Current_board_index]
-        self.Board = [[Num for Num in Row] for Row in self.Original_numbers]
+    def select_board(self):
+        """
+        Selects a board from the 'boards' list and initializes the game board.
+        
+        """
+        self.original_numbers = self.boards[self.current_board_index]
+        self.board = [[Num for Num in Row] for Row in self.original_numbers]
 
-    def Start_game(self):
-        self.Select_board()
-        self.Game_started = True
+    def start_game(self):
+        """
+        Starts the Sudoku game by selecting the first board.
+        
+        """
+        self.select_board()
+        self.game_started = True
+        self.numbers_placed = 0
 
-    def End_game(self):
-        self.Current_board_index += 1
-        if self.Current_board_index < len(self.Boards):
-            self.Start_game()
+    def end_game(self):
+        """
+        Ends the current game and selects the next board.
+        
+        """
+        self.current_board_index += 1
+        if self.current_board_index < len(self.boards):
+            self.start_game()
         else:
-            self.Game_started = False
+            print("Kaikki sudokut on ratkaistu!")
+            self.current_board_index = 0  # Aseta indeksi takaisin nollaan
+            self.game_started = False
 
-    def Is_game_started(self):
-        return self.Game_started
+    def is_game_started(self):
+        """
+        Returns True if the game has started, False otherwise.
+        
+        """
+        return self.game_started
 
-    def Get_board(self):
-        return self.Board
+    def get_board(self):
+        """
+        Returns the current state of the Sudoku board.
+        
+        """
+        return self.board
 
-    def Add_number(self, Row, Col, Number):
-        if not self.Game_started:
+    def add_number(self, row, col, number):
+        """
+        Adds a number to the Sudoku board.
+
+        Args:
+        - row: The row index of the cell.
+        - col: The column index of the cell.
+        - number: The number to be added.
+
+        Returns:
+        - Tuple (row, col) if the number is added successfully, False otherwise.
+        
+        """
+        if not self.game_started:
             return False
-        if 0 <= Row < 9 and 0 <= Col < 9 and 1 <= Number <= 9:
-            if self.Original_numbers[Row][Col] == 0:
-                self.Board[Row][Col] = Number
-                return Row, Col
-            
+        if 0 <= row < 9 and 0 <= col < 9 and 1 <= number <= 9:
+            if self.original_numbers[row][col] == 0:
+                self.board[row][col] = number
+                return row, col
         return False
-    
-    def Is_valid(self):
-        for Row in self.Board:
-            if not self.Is_valid_row(Row):
-                return False
+
+    def is_valid(self):
+        """
+        Checks if the current state of the Sudoku board is valid.
+
+        Returns:
+        - True if the board is valid, False otherwise.
         
-        for Col in range(9):
-            Column = [self.Board[Row][Col] for Row in range(9)]
-            if not self.Is_valid_row(Column):
+        """
+        for row in self.board:
+            if not self.is_valid_row(row):
                 return False
-        
-        for i in range(0, 9, 3):
-            for j in range(0, 9, 3):
-                Square = [self.Board[row][Col] for row in range(i, i + 3) for Col in range(j, j + 3)]
-                if not self.Is_valid_row(Square):
-                    return False
+
+        for col in range(9):
+            column = [self.board[row][col] for row in range(9)]
+            if not self.is_valid_row(column):
+                return False
 
         for i in range(0, 9, 3):
             for j in range(0, 9, 3):
-                Square = [self.Board[row][Col] for row in range(i, i + 3) for Col in range(j, j + 3)]
-                if not self.Is_valid_square(Square):
+                square = [self.board[row][col] for row in range(i, i + 3)
+                          for col in range(j, j + 3)]
+                if not self.is_valid_row(square):
                     return False
-                
-        for Row in self.Board:
-            for Num in Row:
-                if Num == 0:
+
+        for row in self.board:
+            for num in row:
+                if num == 0:
                     return False
-        
-        return True
-    
-    def Is_valid_row(self, Row):
-        Seen = set()
-        for Num in Row:
-            if Num != 0:
-                if Num in Seen:
-                    return False
-                Seen.add(Num)
         return True
 
-    def Is_valid_square(self, Square):
-        Seen = set()
-        for Num in Square:
-            if Num != 0:
-                if Num in Seen:
+    def is_valid_row(self, row):
+        """
+        Checks if a row in the Sudoku board is valid.
+
+        Args:
+        - row: The row to be checked.
+
+        Returns:
+        - True if the row is valid, False otherwise.
+        
+        """
+        seen = set()
+        for num in row:
+            if num != 0:
+                if num in seen:
                     return False
-                Seen.add(Num)
+                seen.add(num)
         return True
-    
-    def Reset_board(self):
+
+    def is_valid_square(self, square):
+        """
+        Checks if a 3x3 square in the Sudoku board is valid.
+
+        Args:
+        - square: The 3x3 square to be checked.
+
+        Returns:
+        - True if the square is valid, False otherwise.
+        
+        """
+        seen = set()
+        for num in square:
+            if num != 0:
+                if num in seen:
+                    return False
+                seen.add(num)
+        return True
+
+    def reset_board(self):
+        """
+        Resets the non-original numbers on the Sudoku board.
+        
+        """
         for i in range(9):
             for j in range(9):
-                if self.Original_numbers[i][j] == 0:
-                    self.Board[i][j] = 0
-                    
-    def Update_level(self, username, new_level):
-        if Check_login(username):
-            Current_level = Get_user_level(username)
-            if Current_level is not None:
-                Update_level_in_database(username, new_level)
+                if self.original_numbers[i][j] == 0:
+                    self.board[i][j] = 0
+
+    def update_level(self, username, new_level):
+        """
+        Updates the user's level in the database.
+
+        Args:
+        - username: The username of the user.
+        - new_level: The new level to be updated.
+
+        """
+        if check_login(username):
+            current_level = get_user_level(username)
+            if current_level is not None:
+                update_level_in_database(username, new_level)
             else:
                 print("Käyttäjän tasoa ei voitu hakea.")
         else:
