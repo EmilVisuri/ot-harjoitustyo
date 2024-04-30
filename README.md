@@ -24,3 +24,7 @@ Vaatimusmäärittely: https://github.com/EmilVisuri/ot-harjoitustyo/blob/master/
 3. Avaa purettu sovellus ja navigoi src kansioon ja avaa se terminaalissa.
 
 4. Kun terminaali on avattu, kirjoita ensin poetry shell, sitten poetry install ja viimeiseksi poetry run invoke start.
+
+5. Testit voi suorittaa komennolla poetry run invoke coverage-report
+
+6. Pylint-tarkastukset voi suorittaa komennolla pylint src
