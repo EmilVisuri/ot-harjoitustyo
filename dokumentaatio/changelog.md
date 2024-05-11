@@ -18,3 +18,8 @@
 - Korjattu pylintin antamia virheitä.
 - Koodia ja ohjelman rakennetta yritetty siistiä jonkin verran.
 - Kaikki tasot suoritettuna, peli aloittaa kokonaan alusta.
+
+## Viikko 7
+- Sovelluksen logiikkaan ei ole tehty muutoksia
+- Sovelluksen koodia on pyritty siistimään
+- Dokumentointia on siistitty
