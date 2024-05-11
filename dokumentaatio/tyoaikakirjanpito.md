@@ -11,5 +11,7 @@
 - 28.4 2h Pylintin antamien virheiden korjaamista
 - 29.4 3h Arkkitehtuurikuvauksen tekemistä, docstringien luominen, sekä käyttöohjeen luominen.
 - 29.4 4h Testien lisäämistä, sovelluksen tekemistä, docstringien päivittämistä, dokumenttien muokkausta.
+- 10.5 1h koodin korjaamista
+- 11.5 1h dokumentoinnin korjaamista
 
 Tunnit yhteensä:**32**
