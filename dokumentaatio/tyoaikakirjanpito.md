@@ -13,5 +13,6 @@
 - 29.4 4h Testien lisäämistä, sovelluksen tekemistä, docstringien päivittämistä, dokumenttien muokkausta.
 - 10.5 1h koodin korjaamista
 - 11.5 1h dokumentoinnin korjaamista
+- 12.5 0.5h viimeiset korjaukset ja harjoitustyön palautus.
 
-Tunnit yhteensä:**32**
+Tunnit yhteensä:**34.5**
