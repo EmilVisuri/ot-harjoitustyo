@@ -2,7 +2,7 @@
 Tarkoituksena olisi luoda **sudoku** peli, jossa käyttäjä voi *kirjautua sisään/luoda tunnuksen*, jolloin pelissä eteneminen **tallennetaan tietokantaan**. 
 
 
-Pelissä pystyy tällä hetkellä pääsemään peliin vierailijana. Itse pelissä voi laittaa tyhjään ruutuun valitsemansa numeron 0-9 välillä ja päästä takaisin alkuvalikkoon "takaisin" napista.
+Pelissä pystyy kirjautumaan sisään, luoda tunnuksen tai pelata vierailijana. Itse pelissä voi pelata viittä eri tasoa, joissa voidaan laittaa tyhjään ruutuun valitsemansa numeron 0-9 välillä ja päästä takaisin alkuvalikkoon "takaisin" napista. Viimeisen tason loputtua peli alkaa alusta. Pelissä pystyy myös tarkastamaan omat vastaukset, sekä nollaamaan ruudun.
 
 ## Dokumentaatio
 Arkkitehtuuri: https://github.com/EmilVisuri/ot-harjoitustyo/blob/master/dokumentaatio/Arkkitehtuuri.md
