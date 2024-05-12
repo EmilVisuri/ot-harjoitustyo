@@ -1,5 +1,5 @@
 **Sovelluksen tarkoitus:**
-Sovelluksen tarkoituksena on tarjota käyttäjille mahdollisuus pelata sudokuja. Sovelluksen avulla käyttäjät voivat kirjautua sisään tai luoda tunnuksen, ratkaista sudokuja eri vaikeustasoilla ja seurata omaa edistymistään.
+Sovelluksen tarkoituksena on tarjota käyttäjille mahdollisuus pelata sudokuja. Sovelluksen avulla käyttäjät voivat kirjautua sisään tai luoda tunnuksen ja ratkaista sudokuja.
 
 **Käyttäjät:**
 Sudokusovelluksessa on kaksi erilaista käyttäjäroolia:
