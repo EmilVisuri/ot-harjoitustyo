@@ -19,7 +19,7 @@ Vaatimusmäärittely: https://github.com/EmilVisuri/ot-harjoitustyo/blob/master/
 ## Sovelluksen testaaminen
 1. Sovellus käyttää SQLite tietokantaa. Jos sinulla ei ole sitä valmiiksi, niin voit ladata sen täältä: https://www.sqlite.org/download.html
 
-2. Lataa sovellus release kohdasta: https://github.com/EmilVisuri/ot-harjoitustyo/releases ja pura ZIP-tiedosto haluamaasi paikkaan.
+2. Lataa sovellus release kohdasta: [https://github.com/EmilVisuri/ot-harjoitustyo/releases](https://github.com/EmilVisuri/ot-harjoitustyo/releases/tag/Loppupalautus) ja pura ZIP-tiedosto haluamaasi paikkaan.
 
 3. Avaa purettu sovellus ja navigoi ohjelman juurikansioon ja avaa se terminaalissa.
 
